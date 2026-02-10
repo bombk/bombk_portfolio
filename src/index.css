@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00ff00;
+  --color-secondary: #00cc00;
+  --color-background-light: #050a05;
+  --color-background-dark: #000000;
+  --color-text-main: #00ff00;
+  --color-text-muted: #00dd00;
+  --background-image-accent-gradient: linear-gradient(135deg, #008800 0%, #00ff00 100%);
+
+  /* Glass colors with sharp neon green tint */
+  --color-glass-bg: rgba(0, 10, 0, 0.9);
+  --color-glass-border: rgba(0, 255, 0, 0.4);
+}
+
+html,
+body {
+  background-color: var(--color-background-dark);
+  @apply text-text-main font-mono overflow-x-hidden selection:bg-primary selection:text-black;
+}
+
+@layer components {
+  .glass {
+    @apply bg-glass-bg backdrop-blur-md border border-glass-border;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+  }
+
+  .glass-card {
+    @apply bg-green-950/10 backdrop-blur-lg border border-green-500/20 transition-all duration-300;
+
+    &:hover {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 25px rgba(0, 255, 0, 0.2);
+    }
+  }
+
+  .text-gradient {
+    @apply bg-accent-gradient bg-clip-text text-transparent;
+    filter: drop-shadow(0 0 2px rgba(0, 255, 0, 0.3));
+  }
+
+  .btn-primary {
+    @apply bg-accent-gradient text-black px-7 py-3 rounded-none font-bold uppercase tracking-[0.2em] transition-all duration-200 border-none outline-none;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(0, 255, 0, 0.6);
+      background: #00ff00;
+    }
+  }
+
+  .section-header h2 {
+    @apply text-5xl font-bold uppercase tracking-tighter;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+  }
+}
+
+@layer utilities {
+  .matrix-bg {
+    background-image:
+      radial-gradient(circle at 50% 50%, rgba(0, 255, 0, 0.08) 0%, transparent 80%),
+      linear-gradient(rgba(0, 255, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 0, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 30px 30px, 30px 30px;
+    background-position: center;
+    animation: matrix-scroll 30s linear infinite;
+  }
+
+  .neon-pulse {
+    animation: neon-pulse 2s infinite alternate;
+  }
+
+  .terminal-window {
+    @apply bg-black/80 backdrop-blur-xl border border-primary/20 relative overflow-hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.05);
+  }
+
+  .scanline {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+        transparent 50%,
+        rgba(0, 255, 0, 0.02) 50%);
+    background-size: 100% 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 10;
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(30px, 60px);
+  }
+}
+
+@keyframes matrix-scroll {
+  from {
+    background-position: center, 0 0, 0 0;
+  }
+
+  to {
+    background-position: center, 0 300px, 300px 0;
+  }
+}
+
+@keyframes neon-pulse {
+  from {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1);
+    border-color: rgba(0, 255, 0, 0.2);
+  }
+
+  to {
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.4), inset 0 0 10px rgba(0, 255, 0, 0.2);
+    border-color: rgba(0, 255, 0, 0.5);
+  }
+}
+
+.bg-blob {
+  @apply fixed w-[600px] h-[600px] rounded-full blur-[120px] -z-5 pointer-events-none opacity-20;
+}
+
+.blob-1 {
+  @apply top-[-150px] left-[-150px] bg-primary/40;
+  animation: float 20s infinite alternate;
+}
+
+.blob-2 {
+  @apply bottom-[-150px] right-[-150px] bg-secondary/30;
+  animation: float 15s infinite alternate-reverse;
+}
