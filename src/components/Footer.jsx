@@ -17,6 +17,7 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/in/bom-bahadur-b-k-1b614a179/" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors text-lg font-medium">LinkedIn</a>
                 <a href="https://github.com/bombk" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors text-lg font-medium">GitHub</a>
                 <a href="https://x.com/bombk" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors text-lg font-medium">Twitter</a>
+                <a href="https://www.facebook.com/braj.bc" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors text-lg font-medium">Facebook</a>
             </div>
 
             <div className="text-sm text-text-muted/60 space-y-2">
