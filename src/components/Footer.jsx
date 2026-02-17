@@ -7,7 +7,7 @@ const Footer = () => {
 
             <div className="mb-10">
                 <h2 className="font-bold text-5xl mb-6 flex justify-center items-center gap-2">
-                    <span className="text-primary font-mono text-3xl">{"</>"}</span>
+                    <span className="text-primary font-mono text-3xl">{"{#}"}</span>
                     BBK
                 </h2>
                 <p className="text-text-muted max-w-md mx-auto leading-relaxed">Building the future of the web, one line at a time. Empowering businesses through elegant code and AI-driven solutions.</p>
