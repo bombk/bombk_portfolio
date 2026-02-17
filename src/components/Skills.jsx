@@ -2,18 +2,20 @@ import React from 'react';
 
 const Skills = () => {
     const skillCategories = [
+          {
+            title: "DevOps",
+            skills: ["Linux","Kubernetes","Docker","Jenkins", "AWS", "CI/CD", "Windows Server", "Nginx", "Apache"]
+        },
+         {
+            title: "Backend",
+            skills: ["Python","Laravel","Django", "PostgreSQL", "Oracle DB", "MongoDB", "MySQL", "Redis"]
+        },
         {
             title: "Frontend",
-            skills: ["React", "Vue", "TypeScript", "Tailwind CSS", "Next.js"]
-        },
-        {
-            title: "Backend",
-            skills: ["Node.js", "Python", "Django", "PostgreSQL", "GraphQL"]
-        },
-        {
-            title: "DevOps",
-            skills: ["Docker", "Kubernetes", "AWS", "CI/CD", "Linux"]
+            skills: ["React", "Bootstrap", "TypeScript", "Tailwind CSS", "Next.js"]
         }
+       
+      
     ];
 
     return (

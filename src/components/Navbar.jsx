@@ -5,7 +5,7 @@ const Navbar = ({ scrolled }) => {
         <nav className={`fixed top-0 w-full px-[5%] py-5 flex justify-between items-center z-[1000] transition-all duration-300 ${scrolled ? 'bg-background-dark/80 backdrop-blur-md py-4' : ''}`}>
             <div className="logo cursor-pointer" onClick={() => window.location.href = '#'}>
                 <h2 className="font-bold text-3xl text-text-main flex items-center gap-2">
-                    <span className="text-primary font-mono select-none">{"</>"}</span>
+            <span className="text-primary font-mono select-none">{"{#}"}</span>
                     BBK
                 </h2>
             </div>
@@ -17,7 +17,7 @@ const Navbar = ({ scrolled }) => {
                 <li><a href="#contact" className="text-text-muted hover:text-text-main transition-colors duration-300 font-medium">Contact</a></li>
             </ul>
             <div className="nav-cta">
-                <button className="btn-primary" onClick={() => window.location.href = '#contact'}>Hire Me</button>
+                <button className="btn-primary" onClick={() => window.location.href = '#contact'}>Contact Me</button>
             </div>
         </nav>
     );
