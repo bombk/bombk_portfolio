@@ -2,7 +2,11 @@ import React from 'react';
 
 const Skills = () => {
     const skillCategories = [
-          {
+        {
+            title: "AI/ML",
+            skills: ["Python","Machine Learning", "Deep Learning","Reinforcement Learning","Keras", "Computer Vision", "TensorFlow", "PyTorch", "Scikit-learn"]
+        },
+        {
             title: "DevOps",
             skills: ["Linux","Kubernetes","Docker","Jenkins", "AWS", "CI/CD", "Windows Server", "Nginx", "Apache"]
         },
