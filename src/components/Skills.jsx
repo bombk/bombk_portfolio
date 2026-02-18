@@ -4,7 +4,7 @@ const Skills = () => {
     const skillCategories = [
         {
             title: "AI/ML",
-            skills: ["Python","Machine Learning", "Deep Learning","Reinforcement Learning","Keras", "Computer Vision", "TensorFlow", "PyTorch", "Scikit-learn"]
+        skills: ["Python","Machine Learning", "Deep Learning","Reinforcement Learning","Data Science","Keras", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "Numpy", "Matplotlib", "Seaborn"]
         },
         {
             title: "DevOps",
